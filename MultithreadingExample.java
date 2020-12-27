@@ -16,7 +16,7 @@ public class MultithreadingExample {
 	{
 		MyThreads mt = new MyThreads(); 
 		mt.start();
-		mt.run();
+		
 		for(int i=0;i<5;i++)
 		{
 			System.out.println("child "+i);
