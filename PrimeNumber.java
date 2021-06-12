@@ -1,39 +1,28 @@
-package com.practicecode;
 
 public class PrimeNumber {
 
-	public static boolean isPrime(int number)
+	public void checkNumber(int number)
 	{
-		boolean result = false;
-		int limit =  0;
-		if(number <10)
-		{
-			limit = number;
-		}
-		else
-		{
-			limit = 10;
-		}
-		int count =0;
-		for(int i=1;i<limit;i++)
+		
+		int count = 0;
+		for(int i = 2;i<10;i++)
 		{
 			if(number%i == 0)
 			{
-				count++;
-				System.out.println(i);
+				count ++;
 			}
 		}
-		if(count >= 2)
+		if(count >=2)
 		{
-			result =false;
+			System.out.println(number+" is a prime number");
 		}
 		else {
-			result = true;
+			System.out.println(number+" is not a prime number");
 		}
-		return result;
 	}
 	public static void main(String[] args)
 	{
-		System.out.println(isPrime(59));
+		PrimeNumber object = new PrimeNumber();
+		object.checkNumber(7);
 	}
 }
